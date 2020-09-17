@@ -36,7 +36,7 @@ continue
 
 fi
 
-if [ $lie -ge 56 ]
+if [ $lie -le 56 ]
 then
 echo "I will be win!" 
 if [ $user_value = 0 ]
