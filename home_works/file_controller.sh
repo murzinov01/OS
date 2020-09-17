@@ -2,7 +2,7 @@
 
 # vars
 fl="<file_name>"
-help_var="I can:\n\n- create $fl\n- delete $fl\n- edit $fl\n- rename $fl >> <new_file_name>\n- move $fl >> <new_path>\n- copy <file_name1> >> <file_name2>\n\n- ls\n- help\n- exit\n\nWhat do you choose?\n"
+help_var="I can:\n\n- create $fl\n- delete $fl\n- edit $fl\n- rename $fl >> <new_file_name>\n- move $fl >> <new_path>\n- copy <file_name1> >> <file_name2>\n\n- help\n- exit\n\nWhat do you choose?\n"
 
 clear
 
@@ -76,12 +76,7 @@ IFS=' ' read -ra params <<< "$a"
     else
       echo "ERROR: this file can not be copied"
     fi
-      
-  # ls
-  elif [[ "$a" == "ls"* ]]
-  then
-    ls
-       
+             
   # help      
   elif [[ "$a" == "help"* ]]
   then
@@ -90,7 +85,9 @@ IFS=' ' read -ra params <<< "$a"
   # Exit 
   elif [[ "$a" == "exit"* ]]
   then
-    exit 0        
+    exit 0
+  else
+  $a        
   fi
 
 done
