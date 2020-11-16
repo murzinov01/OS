@@ -12,4 +12,6 @@ popen("bash ./new_programm.sh", "w");
 gcc -o cprogramm ./cprogramm.c
 ./cprogramm
 
-rm ./cprogramm ./cprogramm.c ./new_programm.sh
+rm ./cprogramm
+rm ./cprogramm.c
+rm ./new_programm.sh
